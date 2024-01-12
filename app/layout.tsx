@@ -15,11 +15,14 @@ import {ReactNode} from 'react';
 import Header from '@/components/header';
 import CategoriesMenu from '@/components/categoriesMenu';
 import Footer from '@/components/footer';
+import Navbar from '@/components/navbar/navbar';
 
 export const metadata: Metadata = {
-  title: 'Boundless-Commerce Next.js v14 Starter Kit',
-  description: 'Build your own e-commerce with Boundless-Commerce and Next.js v14',
+  title: 'Localhost to work',
+  description: 'Build your art life with us',
 };
+
+
 
 export default function RootLayout({children}: {children: ReactNode}) {
   return (
@@ -27,7 +30,8 @@ export default function RootLayout({children}: {children: ReactNode}) {
       <body>
         <WrapperForCartContext>
           <>
-            <Header />
+            <Navbar/>
+          
             <CategoriesMenu />
             {children}
             <Footer />

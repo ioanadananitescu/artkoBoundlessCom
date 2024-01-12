@@ -2,7 +2,9 @@ import Link from 'next/link';
 import {Products, Product} from 'boundless-commerce-components';
 import {nativeFetch, apiClient, revalidate} from '@/lib/api';
 import {IProduct} from 'boundless-api-client';
-import {fetchBasicSettings} from '@/lib/settings';
+import { fetchBasicSettings } from '@/lib/settings';
+
+
 
 export default async function HomePage() {
   const products = await fetchProductsOnMain();
@@ -11,6 +13,7 @@ export default async function HomePage() {
   return (
     <main>
       <div className={'container'}>
+       
         <Products
           all={{gap: 10, perRow: 2}}
           sm={{gap: 20, perRow: 3}}
